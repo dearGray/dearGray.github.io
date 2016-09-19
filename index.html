@@ -31,8 +31,6 @@
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="深灰" type="application/atom+xml">
-
 
 
     <link rel="shortcut icon" href="/favicon.png">
@@ -52,6 +50,7 @@
 
 
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/embed.css">
 
 
     <style> .article { opacity: 0;} </style>
@@ -140,11 +139,6 @@
                         </div>
                         
                         
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
                     </div>
                     
                 </div>
@@ -156,8 +150,6 @@
                         
                         <li>友情链接</li>
                         
-                        
-                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -217,12 +209,6 @@
                 </section>
                 
 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于前端</div>
-                </section>
                 
             </div>
         </div>
@@ -286,6 +272,15 @@
       <time datetime="2016-09-19T01:18:33.000Z" itemprop="datePublished">2016-09-19</time>
 </a>
 
+ 
+    <a href="/2016/09/19/deve-hexo-with-github/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2016/09/19/deve-hexo-with-github/" ></span>
+        
+        
+    </a>
 
     </div>
   
@@ -355,10 +350,10 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016 Sophie Ren
+                2016 <i class="fa fa-heart animated infinite pulse"></i> Sophie Ren
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE
             </div>
         </div>
         
@@ -402,6 +397,31 @@
         })
     </script>
 
+
+    
+        <script>
+            if ($(".left-col").is(":visible")) {
+                var duoshuoQuery = {short_name:"deargray"};
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'http://static.duoshuo.com/embed.js';
+                    s.async = true; s.charset = 'UTF-8';
+                    (d.head || d.body).appendChild(s);
+                })();
+
+                $(document).ready(function(){
+                    var $duoshuoCount = $(".ds-thread-count");
+                    $duoshuoCount.bind("DOMNodeInserted", function(e) {
+                        var num = $(this).text().replace(/[^0-9]/ig,"");
+                        $(this).siblings(".count-comment").text(num);
+                        $(this).remove();
+                    })
+                })
+            }
+        </script>
+    
+
+     
 
 
 
