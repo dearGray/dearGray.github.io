@@ -25,10 +25,10 @@
 <h3 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h3><p>有一点要注意的，请在生成之前进行 ‘clean’ 不然会将一些旧有的，比如明明你已经删掉了的原生 <code>Hello World</code> 一起部署到 <code>GitHub</code> 上。<br>首先记得要安装git的插件:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
 <p>部署动作可直接写成脚本文件 <code>git.sh</code> 放在主目录下执行 <code>. git.sh</code> 一步到位的执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash/</div><div class="line">#这里的目录是你的hexo目录的绝对路径。</div><div class="line">cd /home/ubuntu/workspace/blog/</div><div class="line">echo &quot;执行hexo clean&quot;</div><div class="line">hexo clean</div><div class="line">echo &quot;hexo clean 执行完毕&quot;</div><div class="line">echo &quot;推送源代码&quot;</div><div class="line">#下面三行是提交本地代码到GitHub用的，和部署博客不太一样，可根据需要使用</div><div class="line">#git start</div><div class="line">git add .</div><div class="line">git commit -am &quot;update&quot;</div><div class="line">git push hexo master</div><div class="line">#git end</div><div class="line">echo &quot;推送源代码 执行完毕&quot;</div><div class="line">echo &quot;执行hexo g -d&quot;</div><div class="line">hexo g -d</div><div class="line">echo &quot;hexo g -d 执行完毕&quot;</div></pre></td></tr></table></figure></p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
-<li>主题博大精深啊，这坑还是不要随便入的好</li>
-<li>我用SSH还是要每次输入账号密码，可能是添加的地方不对，改了地方今天再重新试一试</li>
+<li>主题博大精深啊，这坑还是不要随便入的好。</li>
+<li>我用SSH还是要每次输入账号密码，可能是添加的地方不对，改了地方今天再重新试一试。重新试过了，还是每次都要重新输入账号密码，原因不明，也可能是和C9这种模式有关。</li>
 <li>C9真神器，不过今天升级了Chrome，打开特别缓慢，差点打不开了，还好在刷新了多次后一切正常了。</li>
-<li>因为第一天部署博客踩了许多坑，一些乱七八糟的东西也传上去了，我又懒得一一分辨，就直接暴力删除仓库，又重新了个新的，比一个一个排查快速多了</li>
+<li>因为第一天部署博客踩了许多坑，一些乱七八糟的东西也传上去了，我又懒得一一分辨，就直接暴力删除仓库，又重新了个新的，比一个一个排查快速多了。</li>
 <li>写博客超级费时间，以后大约会想起来才更新一次。对于Hexo的研究也暂时到此，最主要的，还是继续学习我的前端知识，提高技能等级。</li>
 </ul>
 ]]></content>
